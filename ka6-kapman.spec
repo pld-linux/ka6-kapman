@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kapman
 Summary:	Kapman
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	98022b70be4baafbfb9f05bdfd722017
+# Source0-md5:	3e8dada2cab530259d04067ffe89ca20
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -55,10 +55,11 @@ increased game speed.
 %description -l pl.UTF-8
 Kapman jest klonem dobrze znanej gry Pac-Man.
 
-Musisz przemieszczać się przez labirynt, połykać pigułki i unikać duchów.
-Zjadając energetyka, Kapman otrzymuje moc zjadania duchów, która trwa
-kilka sekund. Gdy plansza zostanie wyczyszczona z pigułek i energetyka,
-gracz jest przenoszony na następny poziom z nieco przyspieszoną rozgrywką.
+Musisz przemieszczać się przez labirynt, połykać pigułki i unikać
+duchów. Zjadając energetyka, Kapman otrzymuje moc zjadania duchów,
+która trwa kilka sekund. Gdy plansza zostanie wyczyszczona z pigułek i
+energetyka, gracz jest przenoszony na następny poziom z nieco
+przyspieszoną rozgrywką.
 
 %prep
 %setup -q -n %{kaname}-%{version}
